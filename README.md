@@ -24,9 +24,8 @@ Adicione os seguintes links de bibliotecas e scripts ao seu `index.html`:
 `<!-- index.html (dentro de <head>) -->` \
 `<link rel="stylesheet" href="[LINK DO FONT AWESOME CDN]">` \
 `<script src="[LINK DO JQUERY CDN]"></script>` \
-
-`<!-- index.html (no final de <body>) -->`
-`<script src="src/JavaScript/script.js"></script>`
+`<!-- index.html (no final de <body>) -->` \
+`<script src="src/JavaScript/script.js"></script>` \
 2. Estrutura CSS e Estilos Gerais ()
 O styles.css será o arquivo geral para resets, fontes e estilos de componentes reutilizáveis, como botões.
 1. Criação do Arquivo: Crie styles.css dentro da pasta Styles.
