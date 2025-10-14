@@ -1,28 +1,36 @@
-Tutorial Passo a Passo: Construindo a Landing Page Responsiva e Animada
+# Tutorial Passo a Passo: Construindo a Landing Page Responsiva e Animada
 Este tutorial visa replicar a construção da Landing Page responsiva e animada utilizando HTML, CSS, JavaScript e jQuery, conforme apresentado no vídeo. A página foi desenvolvida em componentes, focando em manutenibilidade e responsividade.
-1. Configuração Inicial e Estrutura de Arquivos
+
+1. Configuração Inicial e Estrutura de Arquivos \
 Inicie o projeto organizando a estrutura de pastas e arquivos no VS Code:
 1. Crie uma pasta principal (ex: Landing page).
-2. Crie o arquivo principal: index.html.
-3. Crie a pasta src/.
-4. Dentro de src/, crie as pastas Styles/, JavaScript/ e images/.
-5. Dentro de JavaScript/, crie o arquivo script.js.
-6. Abra o index.html e configure a estrutura básica (usando ! + Enter). Troque a linguagem para PT-BR e o título para Landing page.
+2. Crie o arquivo principal: `index.html`.
+3. Crie a pasta `src/`.
+4. Dentro de `src/`, crie as pastas `Styles/`, `JavaScript/` e `images/`.
+5. Dentro de `JavaScript/`, crie o arquivo `script.js`.
+6. Abra o `index.html` e configure a estrutura básica (usando ! + Enter). \
+Troque a linguagem para **PT-BR** e o título para **Landing page**. \
 Inclusão de Bibliotecas (CDNs)
-Adicione as seguintes referências no <head> do index.html:
-• Font Awesome CDN: Para ícones (ex: hambúrguer, estrelas, redes sociais).
-• jQuery CDN: Para manipulação facilitada do DOM.
-• ScrollReveal CDN: Para as animações de entrada dos elementos.
+Adicione as seguintes referências no `<head>` do `index.html`:
+    - **Font Awesome CDN**: Para ícones (ex: hambúrguer, estrelas, redes sociais).
+    - **jQuery CDN**: Para manipulação facilitada do DOM.
+    - **ScrollReveal CDN**: Para as animações de entrada dos elementos.
+
+```html
 <!-- index.html (dentro de <head>) -->
 <script src="[LINK DO JQUERY CDN]"></script>
 <script src="[LINK DO SCROLL REVEAL CDN]"></script>
 Importe o script principal no final do <body>.
 <!-- index.html (no final de <body>) -->
 <script src="src/JavaScript/script.js"></script>
-2. Estrutura CSS e Estilos Gerais ()
-Crie o arquivo styles.css dentro de src/Styles/. Este arquivo será o estilo geral e o hub de importação para todos os outros CSS.
-A. Estilos Base e Reset
+```
+
+## Estrutura CSS e Estilos Gerais ()
+Crie o arquivo `styles.css` dentro de `src/Styles/`. Este arquivo será o estilo geral e o hub de importação para todos os outros CSS.
+### A. Estilos Base e Reset
 Adicione a importação da fonte Poppins e o reset básico:
+
+```css
 /* src/Styles/styles.css */
 @import url('[LINK DA FONTE POPPINS]');
 
@@ -40,8 +48,12 @@ body {
 section {
     padding: 28px 8%; /* Padding usado em todas as seções [15, 16] */
 }
-B. Componentes Reutilizáveis
-Defina as classes de título de seção e o botão padrão (.btn-defu) no styles.css:
+```
+
+### B. Componentes Reutilizáveis
+Defina as classes de título de seção e o botão padrão `(.btn-defu)` no `styles.css`:
+
+```css
 /* src/Styles/styles.css */
 .section-title {
     color: var(--color-primary-5); /* #E9A209 [18] */
@@ -71,10 +83,14 @@ Defina as classes de título de seção e o botão padrão (.btn-defu) no styles
     gap: 18px;
     /* Estilos de cor, sombra e hover [21, 22] */
 }
-3. Header e Navegação
-Crie o arquivo header.css dentro de src/Styles/.
-A. Estrutura HTML do Header
-A navegação deve incluir a logo, a lista de links para desktop (#nav_list), o botão de ação, o botão mobile (#mobile_btn) e o menu mobile (#mobile_menu).
+```
+
+## 3. Header e Navegação
+Crie o arquivo `header.css` dentro de `src/Styles/`.
+### A. Estrutura HTML do Header
+A navegação deve incluir a logo, a lista de links para desktop `(#nav_list)`, o botão de ação, o botão mobile `(#mobile_btn)` e o menu mobile `(#mobile_menu)`.
+
+```html
 <!-- index.html -->
 <header>
     <nav id="nav_bar">
@@ -90,8 +106,12 @@ A navegação deve incluir a logo, a lista de links para desktop (#nav_list), o 
         <!-- Lista mobile e botão (duplicados da versão desktop) [24] -->
     </div>
 </header>
-B. Estilos CSS do Header
+```
+
+### B. Estilos CSS do Header
 Fixe o header no topo e aplique o layout flexível:
+
+```css
 /* src/Styles/header.css */
 header {
     /* Fixo no topo, cor de fundo e Z-index alto [26, 28] */
@@ -115,8 +135,12 @@ header {
 #mobile_btn, #mobile_menu {
     display: none; /* Esconde a versão mobile inicialmente [30] */
 }
-C. Responsividade do Header
+```
+
+### C. Responsividade do Header
 Use a media query para ocultar os elementos desktop e exibir o botão mobile:
+
+```css
 /* src/Styles/header.css (Media Query) */
 @media screen and (max-width: 1170px) {
     #nav_list, #nav_bar .btn-defu {
@@ -134,9 +158,13 @@ Use a media query para ocultar os elementos desktop e exibir o botão mobile:
     }
     /* ... estilos para #mobile_nav_list [32] */
 }
-4. Interatividade e Sombra no Scroll (jQuery)
-A. Lógica Mobile (script.js)
+```
+
+## 4. Interatividade e Sombra no Scroll (jQuery)
+### A. Lógica Mobile (`script.js`)
 Use jQuery para alternar a classe active no menu mobile e trocar o ícone (bars para x):
+
+```javascript
 // src/JavaScript/script.js
 $(document).ready(function() {
     $('#mobile_btn').on('click', function() {
@@ -144,8 +172,12 @@ $(document).ready(function() {
         $('#mobile_btn').find('i').toggleClass('fa-x'); /* Troca o ícone [33] */
     });
 });
-B. Sombra e Link Ativo no Scroll
+```
+
+### B. Sombra e Link Ativo no Scroll
 Adicione lógica para calcular a posição do scroll e aplicar a sombra no header e alternar a classe active nos links:
+
+```javascript
 // src/JavaScript/script.js (Dentro do $(document).ready())
 
 $(window).on('scroll', function() {
@@ -166,10 +198,14 @@ $(window).on('scroll', function() {
         // ... (Lógica para determinar a seção ativa e adicionar a classe 'active') [36]
     });
 });
-5. Seção Home ()
-Crie home.css dentro de src/Styles/.
-A. Estrutura HTML da Home
-Crie a seção #home com a chamada à ação (#cta), os botões, os ícones de redes sociais e o banner (#banner) com a imagem e a forma geométrica (.shape).
+```
+
+## 5. Seção Home ()
+Crie `home.css` dentro de `src/Styles/`.
+### A. Estrutura HTML da Home
+Crie a seção `#home` com a chamada à ação `(#cta)`, os botões, os ícones de redes sociais e o banner `(#banner)` com a imagem e a forma geométrica `(.shape)`.
+
+```html
 <!-- index.html -->
 <main id="content">
     <section id="home">
@@ -183,6 +219,8 @@ Crie a seção #home com a chamada à ação (#cta), os botões, os ícones de r
         </div>
     </section>
 </main>
+```
+
 B. Estilos CSS da Home
 Defina o layout flexível e posicione os elementos.
 /* src/Styles/home.css */
