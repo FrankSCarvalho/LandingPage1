@@ -6,13 +6,13 @@ Siga os passos e as estruturas de código fornecidas para construir a página ju
 --------------------------------------------------------------------------------
 ## Configuração Inicial e Estrutura de Arquivos
 O primeiro passo é organizar o ambiente de trabalho e criar a estrutura básica de arquivos.
-* Criação da Pasta: Crie uma pasta chamada Landing page.
+1. Criação da Pasta: Crie uma pasta chamada Landing page.
 2. Abertura no VS Code: Abra esta pasta no VS Code e utilize a extensão Live Server para rodar o projeto.
 3. Estrutura de Arquivos: Crie os seguintes arquivos e pastas:
-    ◦ index.html
-    ◦ Pasta Styles/
-    ◦ Pasta JavaScript/
-    ◦ JavaScript/script.js
+    - index.html
+    - Pasta Styles/
+    - Pasta JavaScript/
+    - JavaScript/script.js
 4. HTML Básico: No index.html, insira a estrutura básica de HTML (use ! e dê Enter).
     ◦ Troque a linguagem para PT-BR.
     ◦ Troque o título para Landing page.
