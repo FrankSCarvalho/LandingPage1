@@ -17,16 +17,16 @@ O primeiro passo é organizar o ambiente de trabalho e criar a estrutura básica
     - Troque a linguagem para PT-BR.
     - Troque o título para Landing page.
 5. Inclusão de Bibliotecas e Scripts \
-Adicione os seguintes links de bibliotecas e scripts ao seu index.html:
-    1. Font Awesome (Ícones): No <head>, adicione o CDN do Font Awesome para usar os ícones.
-    2. jQuery: No <head>, adicione o CDN do jQuery, que será usado para a interatividade.
-    3. JavaScript: Importe seu arquivo de script no final do <body>:
-``<!-- index.html (dentro de <head>) -->
-<link rel="stylesheet" href="[LINK DO FONT AWESOME CDN]">
-<script src="[LINK DO JQUERY CDN]"></script>``
+Adicione os seguintes links de bibliotecas e scripts ao seu `index.html`:
+    1. Font Awesome (Ícones): No `<head>`, adicione o CDN do Font Awesome para usar os ícones.
+    2. jQuery: No `<head>`, adicione o CDN do jQuery, que será usado para a interatividade.
+    3. JavaScript: Importe seu arquivo de script no final do `<body>`:
+`<!-- index.html (dentro de <head>) -->`
+`<link rel="stylesheet" href="[LINK DO FONT AWESOME CDN]">`
+`<script src="[LINK DO JQUERY CDN]"></script>`
 
-<!-- index.html (no final de <body>) -->
-<script src="src/JavaScript/script.js"></script>
+`<!-- index.html (no final de <body>) -->`
+`<script src="src/JavaScript/script.js"></script>`
 2. Estrutura CSS e Estilos Gerais ()
 O styles.css será o arquivo geral para resets, fontes e estilos de componentes reutilizáveis, como botões.
 1. Criação do Arquivo: Crie styles.css dentro da pasta Styles.
