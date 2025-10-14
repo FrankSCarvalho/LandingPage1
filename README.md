@@ -4,7 +4,7 @@ Este é um tutorial passo a passo para construir a Landing Page responsiva e ani
 Siga os passos e as estruturas de código fornecidas para construir a página junto.
 
 --------------------------------------------------------------------------------
-1. Configuração Inicial e Estrutura de Arquivos
+## Configuração Inicial e Estrutura de Arquivos
 O primeiro passo é organizar o ambiente de trabalho e criar a estrutura básica de arquivos.
 1. Criação da Pasta: Crie uma pasta chamada Landing page.
 2. Abertura no VS Code: Abra esta pasta no VS Code e utilize a extensão Live Server para rodar o projeto.
