@@ -14,13 +14,13 @@ O primeiro passo é organizar o ambiente de trabalho e criar a estrutura básica
     - Pasta JavaScript/
     - JavaScript/script.js
 4. HTML Básico: No index.html, insira a estrutura básica de HTML (use ! e dê Enter).
-    ◦ Troque a linguagem para PT-BR.
-    ◦ Troque o título para Landing page.
-Inclusão de Bibliotecas e Scripts
+    - Troque a linguagem para PT-BR.
+    - Troque o título para Landing page.
+5. Inclusão de Bibliotecas e Scripts
 Adicione os seguintes links de bibliotecas e scripts ao seu index.html:
-1. Font Awesome (Ícones): No <head>, adicione o CDN do Font Awesome para usar os ícones.
-2. jQuery: No <head>, adicione o CDN do jQuery, que será usado para a interatividade.
-3. JavaScript: Importe seu arquivo de script no final do <body>:
+    1. Font Awesome (Ícones): No <head>, adicione o CDN do Font Awesome para usar os ícones.
+    2. jQuery: No <head>, adicione o CDN do jQuery, que será usado para a interatividade.
+    3. JavaScript: Importe seu arquivo de script no final do <body>:
 ``<!-- index.html (dentro de <head>) -->
 <link rel="stylesheet" href="[LINK DO FONT AWESOME CDN]">
 <script src="[LINK DO JQUERY CDN]"></script>``
