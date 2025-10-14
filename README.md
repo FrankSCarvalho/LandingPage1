@@ -20,10 +20,10 @@ O primeiro passo é organizar o ambiente de trabalho e criar a estrutura básica
 Adicione os seguintes links de bibliotecas e scripts ao seu `index.html`:
     1. Font Awesome (Ícones): No `<head>`, adicione o CDN do Font Awesome para usar os ícones.
     2. jQuery: No `<head>`, adicione o CDN do jQuery, que será usado para a interatividade.
-    3. JavaScript: Importe seu arquivo de script no final do `<body>`:
-`<!-- index.html (dentro de <head>) -->`
-`<link rel="stylesheet" href="[LINK DO FONT AWESOME CDN]">`
-`<script src="[LINK DO JQUERY CDN]"></script>`
+    3. JavaScript: Importe seu arquivo de script no final do `<body>`: \
+`<!-- index.html (dentro de <head>) -->` \
+`<link rel="stylesheet" href="[LINK DO FONT AWESOME CDN]">` \
+`<script src="[LINK DO JQUERY CDN]"></script>` \
 
 `<!-- index.html (no final de <body>) -->`
 `<script src="src/JavaScript/script.js"></script>`
