@@ -221,8 +221,10 @@ Crie a seção `#home` com a chamada à ação `(#cta)`, os botões, os ícones 
 </main>
 ```
 
-B. Estilos CSS da Home
+### B. Estilos CSS da Home
 Defina o layout flexível e posicione os elementos.
+
+```css
 /* src/Styles/home.css */
 #home {
     display: flex;
@@ -250,8 +252,12 @@ Defina o layout flexível e posicione os elementos.
     width: 70%;
     z-index: 2; /* Fica acima do shape [47] */
 }
-C. Responsividade da Home
+```
+
+### C. Responsividade da Home
 Em telas menores, oculte o banner e a forma geométrica, e centralize o CTA:
+
+```css
 /* src/Styles/home.css (Media Query) */
 @media screen and (max-width: 1170px) {
     #home {
@@ -268,12 +274,17 @@ Em telas menores, oculte o banner e a forma geométrica, e centralize o CTA:
         text-align: center;
     }
 }
-6. Seção Cardápio ()
-Crie menu.css dentro de src/Styles/.
-A. Estrutura HTML do Cardápio
-Inclua o título, subtítulo e a div #dishes que contém múltiplos elementos .dish. Cada prato tem o coração (.dish-heart), imagem, título, descrição, avaliação (.dish-rate) e preço (.dish-price).
-B. Estilos CSS do Cardápio
+```
+
+## 6. Seção Cardápio ()
+Crie `menu.css` dentro de `src/Styles/`.
+### A. Estrutura HTML do Cardápio
+Inclua o título, subtítulo e a div `#dishes` que contém múltiplos elementos `.dish`. Cada prato tem o coração `(.dish-heart)`, imagem, título, descrição, avaliação `(.dish-rate)` e preço `(.dish-price)`.
+
+### B. Estilos CSS do Cardápio
 Use display flex para alinhar os pratos em uma grade.
+
+```css
 /* src/Styles/menu.css */
 #dishes {
     width: 100%;
@@ -296,8 +307,12 @@ Use display flex para alinhar os pratos em uma grade.
     /* Estilos para formar o "corte" arredondado [54, 55] */
     background-color: var(--color-primary-5);
 }
-C. Responsividade do Cardápio
+```
+
+### C. Responsividade do Cardápio
 Ajuste o layout para duas colunas e depois para uma coluna:
+
+```css
 /* src/Styles/menu.css (Media Query) */
 @media screen and (max-width: 1170px) {
     #dishes {
@@ -315,10 +330,14 @@ Ajuste o layout para duas colunas e depois para uma coluna:
         width: 100%; /* Uma coluna [58] */
     }
 }
-7. Seção Avaliações ()
-Crie testimonials.css dentro de src/Styles/.
-A. Estrutura HTML das Avaliações
-A seção deve conter a imagem do chefe (#testimonial_chef) e o conteúdo (#testimonials_content), incluindo os títulos e a div #feedbacks.
+```
+
+## 7. Seção Avaliações ()
+Crie `testimonials.css` dentro de `src/Styles/`.
+### A. Estrutura HTML das Avaliações
+A seção deve conter a imagem do chefe `(#testimonial_chef)` e o conteúdo `(#testimonials_content)`, incluindo os títulos e a div `#feedbacks`.
+
+```html
 <!-- index.html -->
 <section id="testimonials">
     <img src="src/images/chef.png" id="testimonial_chef">
@@ -334,8 +353,12 @@ A seção deve conter a imagem do chefe (#testimonial_chef) e o conteúdo (#test
         <button class="btn-defu">Ver mais avaliações</button>
     </div>
 </section>
-B. Estilos CSS das Avaliações
+```
+
+### B. Estilos CSS das Avaliações
 Use display flex para posicionar o chefe ao lado do conteúdo.
+
+```css
 /* src/Styles/testimonials.css */
 #testimonials {
     display: flex;
@@ -353,7 +376,11 @@ Use display flex para posicionar o chefe ao lado do conteúdo.
     height: 100px;
     border-radius: 100%; /* Transforma em círculo [66] */
 }
-C. Responsividade das Avaliações
+```
+
+### C. Responsividade das Avaliações
+
+```css
 /* src/Styles/testimonials.css (Media Query) */
 @media screen and (max-width: 1170px) {
     #testimonials {
@@ -370,10 +397,14 @@ C. Responsividade das Avaliações
     }
 }
 /* ... Ajuste para mobile (width: 100% e feedback em coluna) [68, 69] */
-8. Footer
-Crie footer.css dentro de src/Styles/.
-A. Estrutura HTML do Footer
-O footer inclui a onda SVG (.wave), a informação de copyright e os botões de mídia social.
+```
+
+## 8. Footer
+Crie `footer.css` dentro de `src/Styles/`.
+### A. Estrutura HTML do Footer
+O footer inclui a onda SVG `(.wave)`, a informação de copyright e os botões de mídia social.
+
+```html
 <!-- index.html (Abaixo de </main>) -->
 <footer>
     <img src="src/images/wave.svg" alt="Wave" class="wave"> 
@@ -386,7 +417,11 @@ O footer inclui a onda SVG (.wave), a informação de copyright e os botões de 
         </div>
     </div>
 </footer>
-B. Estilos CSS do Footer
+```
+
+### B. Estilos CSS do Footer
+
+```css
 /* src/Styles/footer.css */
 footer {
     background-color: var(--color-primary-2); /* #FFE8B4 [72] */
@@ -398,7 +433,11 @@ footer {
     justify-content: space-between;
     /* ... padding e alinhamento [73] */
 }
-C. Responsividade do Footer
+```
+
+### C. Responsividade do Footer
+
+```css
 /* src/Styles/footer.css (Media Query) */
 @media screen and (max-width: 600px) {
     #footer_items {
@@ -406,12 +445,17 @@ C. Responsividade do Footer
         gap: 20px;
     }
 }
-9. Refinamento e Animações
-A. Otimização de CSS
-1. Variáveis CSS: Adicione todas as cores primárias e neutras usadas no projeto dentro de :root no styles.css (ex: --color-primary-1, --color-neutral-0) e substitua os códigos hexadecimais em todos os arquivos.
-2. Unificação de Imports: No styles.css, importe todos os arquivos específicos (header.css, home.css, etc.) e remova os <link> individuais do index.html.
-B. Animações ScrollReveal
-Use a biblioteca ScrollReveal para adicionar animações de entrada aos elementos. Adicione o script do ScrollReveal ao index.html (Passo 1).
+```
+
+## 9. Refinamento e Animações
+### A. Otimização de CSS
+1. Variáveis CSS: Adicione todas as cores primárias e neutras usadas no projeto dentro de `:root` no `styles.css` (ex: `--color-primary-1, --color-neutral-0`) e substitua os códigos hexadecimais em todos os arquivos.
+2. Unificação de Imports: No `styles.css`, importe todos os arquivos específicos `(header.css, home.css, etc.)` e remova os `<link>` individuais do `index.html`.
+
+### B. Animações ScrollReveal
+Use a biblioteca ScrollReveal para adicionar animações de entrada aos elementos. Adicione o script do ScrollReveal ao `index.html`.
+
+ ```javascript
 // src/JavaScript/script.js (Fora da função $(document).ready())
 
 // Animação do CTA (Vindo da esquerda) [78]
@@ -441,9 +485,14 @@ ScrollReveal().reveal('.feedback', {
     duration: 1000,
     distance: '20%'
 });
-C. Rolagem Suave (Smooth Scroll)
-Adicione a propriedade scroll-behavior: smooth ao HTML para uma navegação mais suave entre as seções.
+```
+
+### C. Rolagem Suave (Smooth Scroll)
+Adicione a propriedade `scroll-behavior`: smooth ao HTML para uma navegação mais suave entre as seções.
+
+```css
 /* src/Styles/styles.css */
 html {
     scroll-behavior: smooth; /* Comportamento de scroll suave [80] */
 }
+```
