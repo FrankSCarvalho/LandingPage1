@@ -26,11 +26,14 @@ Adicione os seguintes links de bibliotecas e scripts ao seu `index.html`:
 `<script src="[LINK DO JQUERY CDN]"></script>` \
 `<!-- index.html (no final de <body>) -->` \
 `<script src="src/JavaScript/script.js"></script>` \
+
 ## Estrutura CSS e Estilos Gerais ()
 O `styles.css` será o arquivo geral para resets, fontes e estilos de componentes reutilizáveis, como botões.
-    1. Criação do Arquivo: Crie `styles.css` dentro da pasta Styles.
-    2. Importação de Fontes: Use `@import` para importar a fonte Poppins do Google Fonts.
-    3. Reset e Base: Aplique o reset básico:
+1. Criação do Arquivo: Crie `styles.css` dentro da pasta Styles.
+2. Importação de Fontes: Use `@import` para importar a fonte Poppins do Google Fonts.
+3. Reset e Base: Aplique o reset básico:
+
+```css
 /* Styles/styles.css */
 * {
     padding: 0;
@@ -47,7 +50,11 @@ body {
 section {
     padding: 28px 8%; /* Mesmo padding usado no header [9] */
 }
-4. Botão Padrão (.btn-defu): Estilize o botão padrão (componente reutilizável) em styles.css:
+```
+
+4. Botão Padrão `(.btn-defu)`: Estilize o botão padrão (componente reutilizável) em `styles.css`:
+
+```css
 /* Styles/styles.css */
 .btn-defu {
     border: none;
@@ -66,10 +73,14 @@ section {
 .btn-defu:hover {
     background-color: #F8D477; /* Cor do hover [11] */
 }
-3. Construção do Header e Navegação
-Vamos construir a navegação (header) em HTML e estilizar em header.css.
-HTML do Header
-No index.html, crie a estrutura do header:
+```
+
+## Construção do Header e Navegação
+Vamos construir a navegação (header) em HTML e estilizar em `header.css`. \
+HTML do Header \
+No `index.html`, crie a estrutura do header:
+
+```html
 <!-- index.html (dentro de <body>) -->
 <header>
     <nav id="nav_bar">
@@ -109,10 +120,14 @@ No index.html, crie a estrutura do header:
         <button class="btn-defu">Peça aqui</button>
     </div>
 </header>
-CSS do Header ()
-1. Crie header.css dentro de Styles.
-2. Importação: Por enquanto, importe ele no index.html (futuramente faremos a unificação).
+```
+
+**CSS do Header ()**
+1. Crie `header.css` dentro de Styles.
+2. Importação: Por enquanto, importe ele no `index.html` (futuramente faremos a unificação).
 3. Estilização:
+
+```css
 /* Styles/header.css */
 header {
     width: 100%;
@@ -159,8 +174,12 @@ header {
 #mobile_btn, #mobile_menu {
     display: none;
 }
-Responsividade do Header (Media Query)
+```
+
+### Responsividade do Header (Media Query) \
 Adicione a media query para telas menores que 1170px:
+
+```css
 /* Styles/header.css (no final) */
 @media screen and (max-width: 1170px) {
     /* Oculta lista e botão Peça aqui no desktop [23] */
@@ -196,8 +215,12 @@ Adicione a media query para telas menores que 1170px:
         text-align: center;
     }
 }
-Interatividade da Nav Bar (jQuery)
-No JavaScript/script.js, inicialize o jQuery e adicione a lógica para o menu mobile:
+```
+
+### Interatividade da Nav Bar (jQuery)
+No `JavaScript/script.js`, inicialize o jQuery e adicione a lógica para o menu mobile:
+
+```JavaScript
 // JavaScript/script.js
 
 $(document).ready(function() {
@@ -207,10 +230,14 @@ $(document).ready(function() {
         $('#mobile_btn').find('i').toggleClass('fa-x'); // Troca o ícone (barras <-> X) [26]
     });
 });
-4. Construção da Seção Home
+```
+
+## Construção da Seção Home
 A seção home contém o CTA (Título, Descrição, Botões) e o Banner (Imagem e Forma Geométrica).
-HTML da Home
+### HTML da Home
 Crie a seção main e a primeira section abaixo do header:
+
+```html
 <!-- index.html (abaixo de </header>) -->
 <main id="content">
     <section id="home">
@@ -254,9 +281,13 @@ Crie a seção main e a primeira section abaixo do header:
     </section>
     <!-- Outras seções virão aqui -->
 </main>
-CSS da Home ()
-1. Crie home.css dentro de Styles e importe-o no index.html.
+```
+
+### CSS da Home ()
+1. Crie `home.css` dentro de Styles e importe-o no `index.html`.
 2. Estilização Base:
+
+```css
 /* Styles/home.css */
 
 /* Defina position relative para o shape funcionar [35] */
@@ -305,7 +336,11 @@ CSS da Home ()
 #phone_button .btn-defu {
     box-shadow: none; /* Remove sombra do botão interno [38] */
 }
-3. Estilização dos Botões de Mídia Social (em styles.css)
+```
+
+### Estilização dos Botões de Mídia Social (em styles.css)
+
+```css
 /* Styles/styles.css (Adicione aqui) */
 .social-media-buttons {
     display: flex;
@@ -329,7 +364,11 @@ CSS da Home ()
 .social-media-buttons a:hover {
     box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.1); /* Sombra maior no hover [39] */
 }
-4. Estilização do Banner e Shape (em home.css)
+```
+
+### Estilização do Banner e Shape (em `home.css`)
+
+```css
 /* Styles/home.css (Continuação) */
 
 #banner {
@@ -357,7 +396,11 @@ CSS da Home ()
     border-radius: 40% 30% 0% 20%; 
     z-index: 1; /* Fica por baixo do banner [35] */
 }
-Responsividade da Home
+```
+
+### Responsividade da Home
+
+```css
 /* Styles/home.css (no final) */
 
 @media screen and (max-width: 1170px) {
@@ -385,9 +428,13 @@ Responsividade da Home
         display: none;
     }
 }
-5. Construção da Seção Cardápio ()
-Estilos de Título Comuns (em )
+```
+
+## Construção da Seção Cardápio ()
+### Estilos de Título Comuns (em )
 Adicione os estilos dos títulos de seção ao seu arquivo geral, pois serão reutilizados:
+
+```css
 /* Styles/styles.css (Adicione aqui) */
 .section-title {
     color: #E9A209;
@@ -397,8 +444,12 @@ Adicione os estilos dos títulos de seção ao seu arquivo geral, pois serão re
 .section-subtitle {
     font-size: 2.1875rem;
 }
-HTML do Cardápio
+```
+
+### HTML do Cardápio
 Crie a seção menu abaixo da home:
+
+```html
 <!-- index.html (abaixo de </section id="home">) -->
 <section id="menu">
     <h2 class="section-title">Cardápio</h2>
@@ -440,9 +491,13 @@ Crie a seção menu abaixo da home:
         
     </div>
 </section>
-CSS do Cardápio ()
-1. Crie menu.css dentro de Styles e importe-o.
+```
+
+### CSS do Cardápio ()
+1. Crie `menu.css` dentro de Styles e importe-o.
 2. Estilização:
+
+```css
 /* Styles/menu.css */
 #menu {
     display: flex;
@@ -506,7 +561,11 @@ CSS do Cardápio ()
     align-items: center;
     gap: 20px;
 }
-Responsividade do Cardápio
+```
+
+### Responsividade do Cardápio
+
+```css
 /* Styles/menu.css (no final) */
 
 @media screen and (max-width: 1170px) {
@@ -529,9 +588,13 @@ Responsividade do Cardápio
         width: 100%; /* Uma coluna [57] */
     }
 }
-6. Construção da Seção Avaliações ()
-HTML das Avaliações
+```
+
+## Construção da Seção Avaliações ()
+## HTML das Avaliações
 Crie a seção testimonials abaixo da menu:
+
+```html
 <!-- index.html (abaixo de </section id="menu">) -->
 <section id="testimonials">
     <!-- Imagem do Chefe [58, 59] -->
@@ -570,6 +633,8 @@ Crie a seção testimonials abaixo da menu:
         <button class="btn-defu">Ver mais avaliações</button>
     </div>
 </section>
+```
+
 CSS das Avaliações ()
 1. Crie testimonials.css e importe-o.
 2. Estilização:
