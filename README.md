@@ -13,7 +13,7 @@ O primeiro passo é organizar o ambiente de trabalho e criar a estrutura básica
     - Pasta Styles/
     - Pasta JavaScript/
     - JavaScript/script.js
-4. HTML Básico: No index.html, insira a estrutura básica de HTML (use ! e dê Enter).
+4. HTML Básico: No 'index.html', insira a estrutura básica de HTML (use ! e dê Enter).
     - Troque a linguagem para PT-BR.
     - Troque o título para Landing page.
 5. Inclusão de Bibliotecas e Scripts
