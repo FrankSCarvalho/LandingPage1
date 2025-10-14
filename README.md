@@ -26,11 +26,11 @@ Adicione os seguintes links de bibliotecas e scripts ao seu `index.html`:
 `<script src="[LINK DO JQUERY CDN]"></script>` \
 `<!-- index.html (no final de <body>) -->` \
 `<script src="src/JavaScript/script.js"></script>` \
-2. Estrutura CSS e Estilos Gerais ()
-O styles.css será o arquivo geral para resets, fontes e estilos de componentes reutilizáveis, como botões.
-1. Criação do Arquivo: Crie styles.css dentro da pasta Styles.
-2. Importação de Fontes: Use @import para importar a fonte Poppins do Google Fonts.
-3. Reset e Base: Aplique o reset básico:
+## Estrutura CSS e Estilos Gerais ()
+O `styles.css` será o arquivo geral para resets, fontes e estilos de componentes reutilizáveis, como botões.
+    1. Criação do Arquivo: Crie `styles.css` dentro da pasta Styles.
+    2. Importação de Fontes: Use `@import` para importar a fonte Poppins do Google Fonts.
+    3. Reset e Base: Aplique o reset básico:
 /* Styles/styles.css */
 * {
     padding: 0;
